@@ -11,3 +11,5 @@ function hasDuplicate(arr) {
 
   return false;
 }
+
+console.log(hasDuplicate([1, 4, 6, 7, 9]));
