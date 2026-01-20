@@ -1,15 +1,14 @@
 function hasDuplicate(arr) {
-  const n = arr.length;
+  const values = new Set();
 
-  for (let i = 0; i < n; i++) {
-    for (let j = i + 1; j < n; j++) { // j starts at i+1 to avoid i !== j checks
-      if (arr[i] === arr[j]) {
-        return true;
-      }
+  for (const value of arr) {
+    if (values.has(value)) {
+      return true;
     }
+    values.add(value);
   }
 
   return false;
 }
 
-console.log(hasDuplicate([1, 4, 6, 7, 9]));
+console.log(hasDuplicate([7, 1, 4, 6, 7, 9]));
